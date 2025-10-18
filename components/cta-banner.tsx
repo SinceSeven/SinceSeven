@@ -15,15 +15,14 @@ export function CtaBanner({
     >
       <div className="relative z-1">
         <h2 className="text-4xl sm:text-5xl font-semibold tracking-tighter max-w-3xl mx-auto leading-[1.1]">
-          Trust HomeGuardian with Your Home's Security
+          Готови ли сте да развиете бизнеса си онлайн?
         </h2>
         <p className="mt-5 text-muted-foreground text-lg">
-          We will protect your home in any place in the world with our smart
-          assistant.
+          Свържете се с нас за безплатна консултация и оферта за вашия проект.
         </p>
 
         <Button className="mt-10" size="lg">
-          Get a free quote
+          Безплатна консултация
         </Button>
       </div>
 

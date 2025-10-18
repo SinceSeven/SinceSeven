@@ -10,19 +10,19 @@ import { LogoCloud } from "./logo-cloud";
 const plusPoints = [
   {
     icon: ShieldCheckIcon,
-    title: "Real-Time Protection",
+    title: "Модерен дизайн",
     description:
-      "Stay alert with instant notifications and smart security monitoring.",
+      "Създаваме съвременни и отзивчиви уебсайтове, които впечатляват потребителите.",
   },
   {
     icon: CogIcon,
-    title: "Smart & Simple Setup",
-    description: "Install easily in minutes with no complex tools or wiring.",
+    title: "SEO оптимизация",
+    description: "Подобряваме видимостта ви в търсачките за повече посетители и клиенти.",
   },
   {
     icon: BinocularsIcon,
-    title: "Peace of Mind Anywhere",
-    description: "Monitor and control your home from anywhere, anytime.",
+    title: "Онлайн реклами",
+    description: "Ефективни рекламни кампании за максимален резултат от инвестицията.",
   },
 ];
 
@@ -33,13 +33,13 @@ export function WhyChooseUs() {
       className="max-w-(--breakpoint-xl) mx-auto px-6 text-center py-24"
     >
       <strong className="font-semibold text-muted-foreground">
-        Why Choose Us
+        Защо SinceSeven
       </strong>
       <h2 className="mt-5 max-w-4xl mx-auto text-4xl sm:text-5xl leading-[1.1] font-semibold tracking-tighter text-balance">
-        We are Leading in Smart Assistants with Nearly 20 Years of Experience
+        Водещи в уеб разработката и онлайн маркетинга с години опит
       </h2>
       <p className="mt-5 text-lg text-muted-foreground">
-        We are constantly always keep pace with the time.
+        Вярваме в силата на модерните технологии за растежа на вашия бизнес.
       </p>
 
       <div className="mt-12 flex flex-wrap gap-4 justify-center">
@@ -64,7 +64,7 @@ export function WhyChooseUs() {
 
       <div className="mt-32 space-y-12">
         <p className="text-3xl font-medium tracking-tight">
-          Trusted by over 30,000 businesses and 1,500,000 users
+          Доверие от над 100 бизнеса и хиляди доволни клиенти
         </p>
         <LogoCloud />
       </div>

@@ -5,43 +5,43 @@ import { Logo } from "./logo";
 
 const sections = [
   {
-    title: "Company",
+    title: "Компания",
     links: [
-      { title: "About", href: "/#about" },
-      { title: "Careers", href: "/#careers" },
-      { title: "Blog", href: "/#blog" },
-      { title: "Press", href: "/#press" },
-      { title: "Contact", href: "/#contact" },
+      { title: "За нас", href: "/#about" },
+      { title: "Кариери", href: "/#careers" },
+      { title: "Блог", href: "/#blog" },
+      { title: "Новини", href: "/#press" },
+      { title: "Контакти", href: "/#contact" },
     ],
   },
   {
-    title: "Product",
+    title: "Услуги",
     links: [
-      { title: "Features", href: "/#features" },
-      { title: "Pricing", href: "/#pricing" },
-      { title: "Integrations", href: "/#integrations" },
-      { title: "Demo", href: "/#demo" },
-      { title: "FAQs", href: "/#faqs" },
+      { title: "Уеб разработка", href: "/#features" },
+      { title: "SEO оптимизация", href: "/#pricing" },
+      { title: "Google Maps", href: "/#integrations" },
+      { title: "Онлайн реклами", href: "/#demo" },
+      { title: "Често задавани въпроси", href: "/#faqs" },
     ],
   },
   {
-    title: "Resources",
+    title: "Ресурси",
     links: [
-      { title: "Docs", href: "/#docs" },
-      { title: "Help Center", href: "/#help" },
-      { title: "Community", href: "/#community" },
-      { title: "Tutorials", href: "/#tutorials" },
-      { title: "Status", href: "/#status" },
+      { title: "Документация", href: "/#docs" },
+      { title: "Помощ", href: "/#help" },
+      { title: "Общност", href: "/#community" },
+      { title: "Уроци", href: "/#tutorials" },
+      { title: "Статус", href: "/#status" },
     ],
   },
   {
-    title: "Legal",
+    title: "Правна информация",
     links: [
-      { title: "Privacy Policy", href: "/#privacy" },
-      { title: "Terms of Service", href: "/#terms" },
-      { title: "Cookie Policy", href: "/#cookies" },
-      { title: "Security", href: "/#security" },
-      { title: "Licenses", href: "/#licenses" },
+      { title: "Политика за поверителност", href: "/#privacy" },
+      { title: "Условия за ползване", href: "/#terms" },
+      { title: "Политика за бисквитки", href: "/#cookies" },
+      { title: "Сигурност", href: "/#security" },
+      { title: "Лицензи", href: "/#licenses" },
     ],
   },
 ];
@@ -57,7 +57,7 @@ const Footer = () => {
                 <Logo />
               </Link>
               <p className="text-muted-foreground mt-1.5">
-                Beautify your website with our free and premium blocks.
+                Модерни уебсайтове и онлайн маркетинг за растежа на вашия бизнес.
               </p>
             </div>
             {sections.map(({ title, links }) => (
@@ -82,7 +82,7 @@ const Footer = () => {
         <Separator />
         <div className="flex flex-col-reverse items-center justify-center gap-6 px-2 pt-6 pb-4 sm:flex-row sm:justify-between">
           <p className="text-muted-foreground text-sm font-medium">
-            &copy; {new Date().getFullYear()} Bloxxee. All rights reserved.
+            &copy; {new Date().getFullYear()} SinceSeven. Всички права запазени.
           </p>
           <div className="flex items-center gap-4">
             <Link href="/">

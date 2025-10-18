@@ -11,91 +11,91 @@ import {
 interface Feature {
   title: string;
   value: {
-    homeGuardian: boolean | string;
-    basicSystem: boolean | string;
-    otherSystem: boolean | string;
+    sinceSeven: boolean | string;
+    competitors: boolean | string;
+    diyApproach: boolean | string;
   };
 }
 
 const features: Feature[] = [
   {
-    title: "Grade Protection	",
+    title: "Модерен дизайн",
     value: {
-      homeGuardian: true,
-      basicSystem: true,
-      otherSystem: false,
+      sinceSeven: true,
+      competitors: true,
+      diyApproach: false,
     },
   },
   {
-    title: "Rapid SOS",
+    title: "SEO оптимизация",
     value: {
-      homeGuardian: true,
-      basicSystem: false,
-      otherSystem: false,
+      sinceSeven: true,
+      competitors: false,
+      diyApproach: false,
     },
   },
   {
-    title: "Low Upfront Cost",
+    title: "Мобилна оптимизация",
     value: {
-      homeGuardian: true,
-      basicSystem: true,
-      otherSystem: false,
+      sinceSeven: true,
+      competitors: true,
+      diyApproach: false,
     },
   },
   {
-    title: "Low Monthly Cost",
+    title: "Google Maps оптимизация",
     value: {
-      homeGuardian: true,
-      basicSystem: false,
-      otherSystem: true,
+      sinceSeven: true,
+      competitors: false,
+      diyApproach: true,
     },
   },
   {
-    title: "No Contracts",
+    title: "Безплатна поддръжка",
     value: {
-      homeGuardian: true,
-      basicSystem: false,
-      otherSystem: true,
+      sinceSeven: true,
+      competitors: false,
+      diyApproach: true,
     },
   },
   {
-    title: "Easy and Fair Cancellation",
+    title: "Анализ и отчети",
     value: {
-      homeGuardian: true,
-      basicSystem: false,
-      otherSystem: true,
+      sinceSeven: true,
+      competitors: false,
+      diyApproach: true,
     },
   },
   {
-    title: "Lifetime Equipment Warranty",
+    title: "Гаранция за резултат",
     value: {
-      homeGuardian: true,
-      basicSystem: false,
-      otherSystem: false,
+      sinceSeven: true,
+      competitors: false,
+      diyApproach: false,
     },
   },
   {
-    title: "Lifetime Rate Lock Guarantee",
+    title: "24/7 поддръжка",
     value: {
-      homeGuardian: true,
-      basicSystem: false,
-      otherSystem: false,
+      sinceSeven: true,
+      competitors: false,
+      diyApproach: false,
     },
   },
   {
-    title: "Free Upgrades",
+    title: "Безплатни актуализации",
     value: {
-      homeGuardian: true,
-      basicSystem: false,
-      otherSystem: false,
+      sinceSeven: true,
+      competitors: false,
+      diyApproach: false,
     },
   },
   {
-    title: "Average Install Time",
+    title: "Време за изпълнение",
     value: {
-      homeGuardian: "30 minutes",
-      basicSystem: "~ 2 hours",
-      otherSystem: "~ 3 hours",
+      sinceSeven: "7-14 дни",
+      competitors: "30+ дни",
+      diyApproach: "6+ месеца",
     },
   },
 ];
@@ -107,14 +107,13 @@ export function FeaturesComparison() {
       className="max-w-(--breakpoint-xl) mx-auto px-6 text-center py-24"
     >
       <strong className="font-semibold text-muted-foreground">
-        Our Features
+        Нашите предимства
       </strong>
       <h2 className="mt-5 max-w-4xl mx-auto text-4xl sm:text-5xl leading-[1.1] font-semibold tracking-tighter text-balance">
-        Experience the Difference with HomeGuardian
+        Защо да изберете SinceSeven за вашия проект
       </h2>
       <p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto">
-        We excel in delivering innovative and high-quality solutions that meet
-        the unique needs of our clients.
+        Предлагаме иновативни и висококачествени решения, които отговарят на уникалните нужди на нашите клиенти.
       </p>
 
       <div className="mt-16 border p-2 bg-muted border-dashed rounded-lg">
@@ -122,9 +121,9 @@ export function FeaturesComparison() {
           <TableHeader>
             <TableRow className="[&>th]:py-5 [&>th]:border [&>th]:border-dashed border-dashed text-xl [&>th]:text-center [&>th]:bg-muted/30">
               <TableHead className="w-32 bg-[image:repeating-linear-gradient(315deg,_var(--muted)_0,_var(--muted)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed"></TableHead>
-              <TableHead>HomeGuardian</TableHead>
-              <TableHead>Basic System</TableHead>
-              <TableHead>Other System</TableHead>
+              <TableHead>SinceSeven</TableHead>
+              <TableHead>Конкуренти</TableHead>
+              <TableHead>Самостоятелно</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -136,9 +135,9 @@ export function FeaturesComparison() {
                 <TableCell className="text-start px-10 font-medium bg-muted/30">
                   {feature.title}
                 </TableCell>
-                <ValueCell value={feature.value.homeGuardian} />
-                <ValueCell value={feature.value.basicSystem} />
-                <ValueCell value={feature.value.otherSystem} />
+                <ValueCell value={feature.value.sinceSeven} />
+                <ValueCell value={feature.value.competitors} />
+                <ValueCell value={feature.value.diyApproach} />
               </TableRow>
             ))}
           </TableBody>

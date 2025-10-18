@@ -30,27 +30,27 @@ export const NavMenu = ({
       >
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={triggerStyle}>
-            <Link href="/#why-choose-us">Why Choose Us</Link>
+            <Link href="/#why-choose-us">За нас</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={triggerStyle}>
-            <Link href="/#industries">Industries</Link>
+            <Link href="/#industries">Услуги</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={triggerStyle}>
-            <Link href="/#features">Features</Link>
+            <Link href="/#features">Предимства</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={triggerStyle}>
-            <Link href="/#faq">FAQ</Link>
+            <Link href="/#faq">Въпроси</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={triggerStyle}>
-            <Link href="/#testimonials">Testimonials</Link>
+            <Link href="/#testimonials">Отзиви</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

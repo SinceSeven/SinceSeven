@@ -1,43 +1,43 @@
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Product Designer at Canva",
+    name: "Мария Петрова",
+    role: "Собственик на е-магазин",
     avatar: "https://mockmind-api.uifaces.co/content/human/97.jpg",
     testimonial:
-      "This product completely changed the way I work. The interface is intuitive and the performance is top-notch.",
+      "SinceSeven направиха невероятен уебсайт за моя онлайн магазин. Продажбите се увеличиха с 40% само за 3 месеца!",
   },
   {
-    name: "Daniel Kim",
-    role: "CTO at NextLaunch",
+    name: "Георги Димитров",
+    role: "Мениджър в строителна фирма",
     avatar: "https://mockmind-api.uifaces.co/content/human/80.jpg",
     testimonial:
-      "We integrated this solution into our stack within days, and the benefits were immediate. Our team collaboration improved, deployment times dropped, and the analytics insights have helped us fine-tune performance at every level.",
+      "Благодарение на тяхната SEO оптимизация, нашата фирма се появява на първо място в Google за всички важни търсения в региона. Имаме повече клиенти от всякога.",
   },
   {
-    name: "Emily Chen",
-    role: "Marketing Manager at HubSpot",
+    name: "Елена Стоянова",
+    role: "Собственик на ресторант",
     avatar: "https://mockmind-api.uifaces.co/content/human/113.jpg",
     testimonial:
-      "I've worked with multiple marketing platforms over the years, but none have offered the kind of personalized experience and seamless integration that this one does. It has truly elevated our campaigns and improved our ROI.",
+      "Google Maps оптимизацията, която направиха, доведе до значително увеличение на резервациите. Професионални и отзивчиви.",
   },
   {
-    name: "Raj Mehta",
-    role: "Frontend Developer at Zomato",
+    name: "Иван Николов",
+    role: "Фризьор",
     avatar: "https://mockmind-api.uifaces.co/content/human/90.jpg",
-    testimonial: "Clean, fast, and reliable. Everything a dev could ask for.",
+    testimonial: "Бърз, качествен и надежден сервис. Препоръчвам!",
   },
   {
-    name: "Aisha Patel",
-    role: "Software Engineer at Swiggy",
+    name: "Десислава Йорданова",
+    role: "Счетоводител",
     avatar: "https://mockmind-api.uifaces.co/content/human/116.jpg",
-    testimonial: "Smooth and delightful experience!",
+    testimonial: "Отлично обслужване и страхотни резултати!",
   },
   {
-    name: "Liam Garcia",
-    role: "Startup Founder",
+    name: "Стефан Василев",
+    role: "Стартъп основател",
     avatar: "https://mockmind-api.uifaces.co/content/human/112.jpg",
     testimonial:
-      "I've used dozens of tools in the past year alone, and this is one of the few I'd actually recommend to other founders. It doesn't just work — it works smart. Everything feels thoughtfully designed and built with care.",
+      "SinceSeven направиха невероятен уебсайт за нашия стартъп. Професионализмът им и вниманието към детайлите са впечатляващи.",
   },
 ];
 
@@ -45,10 +45,10 @@ export function Testimonials() {
   return (
     <div className="mx-auto max-w-(--breakpoint-xl) px-6 py-12 sm:py-24">
       <h2 className="text-center text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
-        Loved by Our Users
+        Обичани от нашите клиенти
       </h2>
       <p className="text-muted-foreground mt-2 text-center text-lg tracking-normal text-balance sm:mt-4 sm:text-2xl">
-        Their experiences speak louder than words
+        Техните отзиви говорят повече от думи
       </p>
 
       <div className="mx-auto mt-16 max-w-5xl columns-1 gap-6 sm:columns-2 lg:columns-3">

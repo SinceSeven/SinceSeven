@@ -19,62 +19,51 @@ type FrequentlyAskedQuestion = {
 
 const faqs: FrequentlyAskedQuestion[] = [
   {
-    question: "What is your return policy?",
+    question: "Колко време отнема да се направи уебсайт?",
     answer:
-      "We offer a 30-day return policy on all unused products. Please ensure the item is in original packaging when returning.",
-    icon: Package,
-  },
-  {
-    question: "How long does shipping take?",
-    answer:
-      "Shipping typically takes 3-7 business days depending on your location.",
+      "Типично изпълнението отнема 7-14 работни дни в зависимост от сложността на проекта и изискванията.",
     icon: Clock,
   },
   {
-    question: "Do you ship internationally?",
+    question: "Предлагате ли SEO оптимизация?",
     answer:
-      "Yes, we ship to most countries worldwide. Shipping fees and delivery times vary by destination.",
-    icon: Plane,
+      "Да, всички наши уебсайтове включват основна SEO оптимизация. Предлагаме и разширени SEO услуги.",
+    icon: Package,
   },
   {
-    question: "How can I track my order?",
+    question: "Поддържате ли уебсайтовете след изпълнението?",
     answer:
-      "After your order is shipped, you'll receive an email with a tracking link. You can also track your order in your account dashboard.",
-    icon: Waypoints,
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, PayPal, UPI, and net banking.",
-    icon: CircleDollarSign,
-  },
-  {
-    question: "Can I cancel or change my order?",
-    answer:
-      "Yes, you can cancel or modify your order within 2 hours of placing it. After that, the order may already be processed for shipment.",
-    icon: PackageX,
-  },
-  {
-    question: "Is my personal information secure?",
-    answer:
-      "Yes, we use industry-standard encryption to ensure your personal and payment information is secure.",
+      "Да, предлагаме безплатна поддръжка за първите 3 месеца и опции за дългосрочна поддръжка.",
     icon: ShieldPlus,
   },
   {
-    question: "Do you offer customer support?",
+    question: "Как мога да проследя резултатите от SEO?",
     answer:
-      "Absolutely. Our support team is available 24/7 via email and chat to help with any issues or questions.",
-    icon: Users,
+      "Предоставяме месечни отчети с позиции в търсачките, трафик и други важни метрики.",
+    icon: Waypoints,
   },
   {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, PayPal, UPI, and net banking.",
+    question: "Какви са вашите цени?",
+    answer: "Цените варират според проекта. Свържете се с нас за персонализирана оферта.",
     icon: CircleDollarSign,
   },
   {
-    question: "Can I cancel or change my order?",
+    question: "Мога ли да променям съдържанието сам?",
     answer:
-      "Yes, you can cancel or modify your order within 2 hours of placing it. After that, the order may already be processed for shipment.",
-    icon: PackageX,
+      "Да, всички уебсайтове идват с лесна за използване администрация, където можете да правите промени.",
+    icon: Users,
+  },
+  {
+    question: "Защитени ли са моите данни?",
+    answer:
+      "Да, използваме най-новите стандарти за сигурност, за да гарантираме защитата на вашите данни.",
+    icon: ShieldPlus,
+  },
+  {
+    question: "Предлагате ли обучение?",
+    answer:
+      "Да, предоставяме безплатно обучение за използване на вашия нов уебсайт и администрацията.",
+    icon: Users,
   },
 ];
 
@@ -83,10 +72,10 @@ export function FAQ() {
     <div id="faq" className="bg-muted">
       <div className="max-w-(--breakpoint-xl) mx-auto px-6 text-center py-24">
         <h2 className="mt-5 max-w-4xl mx-auto text-4xl sm:text-5xl leading-[1.1] font-semibold tracking-tighter text-balance">
-          Frequently Asked Questions
+          Често задавани въпроси
         </h2>
         <p className="mt-5 text-lg text-muted-foreground">
-          Find answers to common questions about our products and services.
+          Намерете отговори на най-честите въпроси за нашите услуги.
         </p>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2">

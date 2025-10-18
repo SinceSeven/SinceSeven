@@ -1,37 +1,37 @@
 import {
   ArrowUpRightIcon,
-  Cctv,
-  CpuIcon,
-  HeartHandshakeIcon,
-  HousePlugIcon,
+  Globe,
+  Search,
+  MapPin,
+  Megaphone,
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { CtaBanner } from "./cta-banner";
 
 const industries = [
   {
-    icon: Cctv,
-    title: "Security Cameras",
+    icon: Globe,
+    title: "Уеб разработка",
     description:
-      "Keep all eyes on your home with our customized security video surveillance systems.",
+      "Създаваме модерни, бързи и отзивчиви уебсайтове, които впечатляват вашите клиенти.",
   },
   {
-    icon: HousePlugIcon,
-    title: "Home Automation",
+    icon: Search,
+    title: "SEO оптимизация",
     description:
-      "Discover the easy-to-use automation system that offers total control of your home.",
+      "Подобряваме позициите ви в търсачките за повече органичен трафик и клиенти.",
   },
   {
-    icon: HeartHandshakeIcon,
-    title: "Fire and Life Safety",
+    icon: MapPin,
+    title: "Google Maps оптимизация",
     description:
-      "Prepare your home for the unexpected with our fire and life safety appliances.",
+      "Оптимизираме вашето присъствие в Google Maps за местни търсения и клиенти.",
   },
   {
-    icon: CpuIcon,
-    title: "Adjustment Systems",
+    icon: Megaphone,
+    title: "Онлайн реклами",
     description:
-      "Keep all eyes on your home with our customized security video surveillance systems.",
+      "Ефективни Google Ads и Facebook рекламни кампании за максимален ROI.",
   },
 ];
 
@@ -40,13 +40,13 @@ export function Industries() {
     <div id="industries" className="bg-primary/4">
       <div className="max-w-(--breakpoint-xl) mx-auto px-6 text-center py-24">
         <strong className="font-semibold text-muted-foreground">
-          Best for You
+          Нашите услуги
         </strong>
         <h2 className="mt-5 max-w-4xl mx-auto text-4xl sm:text-5xl leading-[1.1] font-semibold tracking-tighter text-balance">
-          Industries in Which We Show the Highest Class
+          Пълен спектър от услуги за онлайн успеха на вашия бизнес
         </h2>
         <p className="mt-5 text-lg text-muted-foreground">
-          On the other hand, we denounce with righteous
+          От модерен уебсайт до ефективни маркетингови кампании - всичко на едно място.
         </p>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
@@ -67,7 +67,7 @@ export function Industries() {
                   <p className="mt-3">{industry.description}</p>
 
                   <Button className="mt-6">
-                    Learn More <ArrowUpRightIcon />
+                    Научете повече <ArrowUpRightIcon />
                   </Button>
                 </div>
 
