@@ -2,40 +2,34 @@
 
 import {
   ArrowUpRightIcon,
-  Globe,
-  Search,
-  MapPin,
-  Megaphone,
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { CtaBanner } from "./cta-banner";
-import dynamic from "next/dynamic";
+import Image from "next/image";
+import pin from "../public/icons/3dicons-map-pin-iso-color.png";
+import gear from "../public/icons/3dicons-setting-dynamic-color.png";
 
-const Icon3DCanvas = dynamic(
-  () => import("./icon3DCanvas").then((mod) => mod.Icon3DCanvas),
-  { ssr: false }
-);
 const industries = [
   {
-    icon: Globe,
+    icon: pin,
     title: "Уеб разработка",
     description:
       "Създаваме модерни, бързи и отзивчиви уебсайтове, които впечатляват вашите клиенти.",
   },
   {
-    icon: Search,
+    icon: pin,
     title: "SEO оптимизация",
     description:
       "Подобряваме позициите ви в търсачките за повече органичен трафик и клиенти.",
   },
   {
-    icon: () => <Icon3DCanvas name="pinmap" size={70} animationType="wave" />,
+    icon: pin,
     title: "Google Maps оптимизация",
     description:
       "Оптимизираме вашето присъствие в Google Maps за местни търсения и клиенти.",
   },
   {
-    icon: () => <Icon3DCanvas name="setting" size={70} animationType="wave" />,
+    icon: gear,
     title: "Онлайн реклами",
     description:
       "Ефективни Google Ads и Facebook рекламни кампании за максимален ROI.",
@@ -65,9 +59,10 @@ export function Industries() {
             >
               <div className="relative px-6 py-10 bg-card rounded-md border h-full overflow-hidden">
                 <div className="relative z-1 flex flex-col items-center">
-                  <industry.icon
-                    className="size-12 text-primary"
-                    strokeWidth={1.75}
+                  <Image
+                    src={industry.icon}
+                    alt={industry.title}
+                    className="size-32"
                   />
                   <h3 className="mt-8 text-xl font-semibold tracking-tight">
                     {industry.title}
