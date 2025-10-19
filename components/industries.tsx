@@ -29,13 +29,13 @@ const industries = [
       "Подобряваме позициите ви в търсачките за повече органичен трафик и клиенти.",
   },
   {
-    icon: () => <Icon3DCanvas name="pinmap" size={70} />,
+    icon: () => <Icon3DCanvas name="pinmap" size={70} animationType="wave" />,
     title: "Google Maps оптимизация",
     description:
       "Оптимизираме вашето присъствие в Google Maps за местни търсения и клиенти.",
   },
   {
-    icon: () => <Icon3DCanvas name="setting" size={70} />,
+    icon: () => <Icon3DCanvas name="setting" size={70} animationType="wave" />,
     title: "Онлайн реклами",
     description:
       "Ефективни Google Ads и Facebook рекламни кампании за максимален ROI.",
