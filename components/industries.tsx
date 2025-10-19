@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ArrowUpRightIcon,
   Globe,
@@ -7,7 +9,12 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { CtaBanner } from "./cta-banner";
+import dynamic from "next/dynamic";
 
+const Icon3DCanvas = dynamic(
+  () => import("./icon3DCanvas").then((mod) => mod.Icon3DCanvas),
+  { ssr: false }
+);
 const industries = [
   {
     icon: Globe,
@@ -22,13 +29,13 @@ const industries = [
       "Подобряваме позициите ви в търсачките за повече органичен трафик и клиенти.",
   },
   {
-    icon: MapPin,
+    icon: () => <Icon3DCanvas name="pinmap" size={70} />,
     title: "Google Maps оптимизация",
     description:
       "Оптимизираме вашето присъствие в Google Maps за местни търсения и клиенти.",
   },
   {
-    icon: Megaphone,
+    icon: () => <Icon3DCanvas name="setting" size={70} />,
     title: "Онлайн реклами",
     description:
       "Ефективни Google Ads и Facebook рекламни кампании за максимален ROI.",
@@ -46,7 +53,8 @@ export function Industries() {
           Пълен спектър от услуги за онлайн успеха на вашия бизнес
         </h2>
         <p className="mt-5 text-lg text-muted-foreground">
-          От модерен уебсайт до ефективни маркетингови кампании - всичко на едно място.
+          От модерен уебсайт до ефективни маркетингови кампании - всичко на едно
+          място.
         </p>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
