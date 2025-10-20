@@ -63,9 +63,6 @@ export function WhyChooseUs() {
             <p className="text-muted-foreground text-balance">
               {plusPoint.description}
             </p>
-            <Button className="mt-6">
-              Learn More <ArrowUpRightIcon />
-            </Button>
           </div>
         ))}
       </div>

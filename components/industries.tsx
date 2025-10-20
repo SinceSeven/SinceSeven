@@ -69,10 +69,6 @@ export function Industries() {
                     {industry.title}
                   </h3>
                   <p className="mt-3">{industry.description}</p>
-
-                  <Button className="mt-6">
-                    Научете повече <ArrowUpRightIcon />
-                  </Button>
                 </div>
 
                 <PatternDashedTop />

@@ -11,14 +11,13 @@ export function Hero() {
       </h1>
       <div className="mt-8 max-w-3xl mx-auto text-lg text-muted-foreground text-balance">
         <p>
-          Помагаме на бизнесите да се развиват онлайн с модерни уебсайтове, SEO оптимизация, Google Maps оптимизация и ефективни онлайн рекламни кампании.
+          Помагаме на бизнесите да се развиват онлайн с модерни уебсайтове, SEO
+          оптимизация, Google Maps оптимизация и ефективни онлайн рекламни
+          кампании.
         </p>
       </div>
       <div className="mt-12 flex gap-4 justify-center">
         <Button size="lg">Заявка за оферта</Button>
-        <Button variant="outline" size="lg">
-          Научете повече
-        </Button>
       </div>
 
       <div className="mt-20 aspect-video border rounded-lg bg-muted p-2">
