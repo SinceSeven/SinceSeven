@@ -1,23 +1,24 @@
 "use client";
 
-import {
-  ArrowUpRightIcon,
-} from "lucide-react";
+import { ArrowUpRightIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { CtaBanner } from "./cta-banner";
 import Image from "next/image";
 import pin from "../public/icons/3dicons-map-pin-iso-color.png";
 import gear from "../public/icons/3dicons-setting-dynamic-color.png";
+import computer from "../public/icons/color.png";
+import zoom from "../public/icons/3dicons-zoom-dynamic-color.png";
+import target from "../public/icons/3dicons-target-dynamic-color.png";
 
 const industries = [
   {
-    icon: pin,
+    icon: computer,
     title: "Уеб разработка",
     description:
       "Създаваме модерни, бързи и отзивчиви уебсайтове, които впечатляват вашите клиенти.",
   },
   {
-    icon: pin,
+    icon: zoom,
     title: "SEO оптимизация",
     description:
       "Подобряваме позициите ви в търсачките за повече органичен трафик и клиенти.",
@@ -29,7 +30,7 @@ const industries = [
       "Оптимизираме вашето присъствие в Google Maps за местни търсения и клиенти.",
   },
   {
-    icon: gear,
+    icon: target,
     title: "Онлайн реклами",
     description:
       "Ефективни Google Ads и Facebook рекламни кампании за максимален ROI.",

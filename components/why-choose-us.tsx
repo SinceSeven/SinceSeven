@@ -1,33 +1,34 @@
-import {
-  ArrowUpRightIcon,
-  BinocularsIcon,
-  CogIcon,
-  ShieldCheckIcon,
-} from "lucide-react";
+import { ArrowUpRightIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { LogoCloud } from "./logo-cloud";
+import Image from "next/image";
+import computer from "../public/icons/color.png";
+import zoom from "../public/icons/3dicons-zoom-dynamic-color.png";
+import target from "../public/icons/3dicons-target-dynamic-color.png";
+import internet from "../public/icons/3dicons-wifi-dynamic-color.png";
+import rocket from "../public/icons/3dicons-rocket-dynamic-color.png";
+import medal from "../public/icons/3dicons-medal-dynamic-color.png";
 
 const plusPoints = [
   {
-    icon: ShieldCheckIcon,
-    title: "Модерен дизайн",
+    icon: rocket,
+    title: "Доказани резултати",
     description:
-      "Създаваме съвременни и отзивчиви уебсайтове, които впечатляват потребителите.",
+      "Нашите клиенти виждат реален растеж в трафика, продажбите и ангажираността още през първите месеци.",
   },
   {
-    icon: CogIcon,
-    title: "SEO оптимизация",
+    icon: internet,
+    title: "Подобрено онлайн присъствие",
     description:
-      "Подобряваме видимостта ви в търсачките за повече посетители и клиенти.",
+      "Създаваме силно и разпознаваемо дигитално лице на вашия бизнес във всички платформи.",
   },
   {
-    icon: BinocularsIcon,
-    title: "Онлайн реклами",
+    icon: medal,
+    title: "Най-добрите практики",
     description:
-      "Ефективни рекламни кампании за максимален резултат от инвестицията.",
+      "Използваме утвърдени стратегии и модерни технологии, които гарантират качество и устойчиви резултати.",
   },
 ];
-
 export function WhyChooseUs() {
   return (
     <div
@@ -52,7 +53,12 @@ export function WhyChooseUs() {
           >
             <BackgroundPattern />
 
-            <plusPoint.icon className="size-14 stroke-[1.5px] text-primary" />
+            <Image
+              src={plusPoint.icon}
+              alt={plusPoint.title}
+              className="size-20 object-contain"
+            />
+
             <h3 className="mt-6 text-xl font-semibold">{plusPoint.title}</h3>
             <p className="text-muted-foreground text-balance">
               {plusPoint.description}
