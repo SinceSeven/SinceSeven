@@ -15,6 +15,7 @@ import {
   PhoneIcon,
   Loader2,
   CheckCircle,
+  Shield,
 } from "lucide-react";
 import Link from "next/link";
 import { ChangeEvent, useState } from "react";
@@ -61,10 +62,7 @@ export const ContactSection = () => {
   }
 
   return (
-    <section
-      id="contact"
-      className="py-16 bg-gradient-to-b from-background to-accent/20"
-    >
+    <section id="contact" className="py-16 bg-primary/4">
       <div className="w-full max-w-7xl mx-auto px-6 xl:px-0">
         <div className="text-center mb-16">
           <span className="text-muted-foreground uppercase font-semibold text-sm">
@@ -253,32 +251,35 @@ export const ContactSection = () => {
                         id="terms"
                         disabled={isLoading}
                         checked={formData.terms}
-                        onCheckedChange={(checked: boolean) => updateField("terms", checked)}
+                        onCheckedChange={(checked: boolean) =>
+                          updateField("terms", checked)
+                        }
                         className={`mt-2 ${
                           errors.terms ? "border-red-500" : ""
                         }`}
                       />
-                      <Label htmlFor="terms" className="text-sm leading-5">
+                      <span className="flex items-center gap-2">
                         Съгласен/на съм с обработката на личните ми данни за
                         целите на тази консултация.
-                        <button
+                        <Button
                           type="button"
                           onClick={(e) => {
                             e.preventDefault();
                             setIsPrivacyModalOpen(true);
                           }}
-                          className="underline ml-1 text-primary hover:text-primary/80"
+                          className="ml-2 flex items-cente hover:text-gray-900"
                         >
+                          <Shield className="h-4 w-4 mr-1" />
                           Политика за поверителност
-                        </button>
-                      </Label>
+                        </Button>
+                      </span>
                     </div>
 
-                      {errors.terms && (
-                        <p className="text-red-500 text-sm mt-1">
-                          {errors.terms}
-                        </p>
-                      )}
+                    {errors.terms && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.terms}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -306,11 +307,11 @@ export const ContactSection = () => {
           </Card>
         </div>
       </div>
-      
+
       {/* Privacy Policy Modal */}
-      <PrivacyPolicyModal 
-        isOpen={isPrivacyModalOpen} 
-        onClose={() => setIsPrivacyModalOpen(false)} 
+      <PrivacyPolicyModal
+        isOpen={isPrivacyModalOpen}
+        onClose={() => setIsPrivacyModalOpen(false)}
       />
     </section>
   );
