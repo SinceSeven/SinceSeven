@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -8,15 +9,11 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useContactForm } from "@/lib/hooks/useContactForm";
 import { PrivacyPolicyModal } from "@/components/privacy-policy-modal";
-import {
-  MailIcon,
-  PhoneIcon,
-  Loader2,
-  CheckCircle,
-  Shield,
-} from "lucide-react";
+import { Loader2, CheckCircle, Shield } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import phoneIcon from "../public/icons/3dicons-call-ringing-dynamic-color.png";
+import emailIcon from "../public/icons/3dicons-mail-dynamic-color.png";
 
 export const ContactSection = () => {
   const { formData, errors, isLoading, isSuccess, updateField, submitForm } =
@@ -73,38 +70,44 @@ export const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 md:gap-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10">
-            <div>
-              <div className="h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full">
-                <MailIcon />
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-12 items-start">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-x-6 gap-y-8 mt-6">
+            <div className="rounded-lg border bg-muted p-1 relative">
+              <div className="relative px-6 py-8 bg-card rounded-md border flex flex-col items-center">
+                <Image src={emailIcon} alt="Email Icon" className="h-16 w-16" />
+                <h3 className="mt-5 text-xl font-semibold tracking-tight text-center">
+                  Имейл
+                </h3>
+                <p className="mt-3 text-center text-muted-foreground">
+                  Изпратете ни имейл за всякакви въпроси.
+                </p>
+                <Link
+                  href="mailto:info@sinceseven.bg"
+                  className="mt-3 text-center font-medium text-primary hover:underline break-words"
+                >
+                  info@sinceseven.bg
+                </Link>
+                <PatternDashedTop />
               </div>
-              <h3 className="mt-6 font-semibold text-xl">Имейл</h3>
-              <p className="my-2.5 text-muted-foreground">
-                Изпратете ни имейл за всякакви въпроси.
-              </p>
-              <Link
-                className="font-medium text-primary hover:underline break-words"
-                href="mailto:info@sinceseven.bg"
-              >
-                info@sinceseven.bg
-              </Link>
             </div>
 
-            <div>
-              <div className="h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full">
-                <PhoneIcon />
+            <div className="rounded-lg border bg-muted p-1 relative">
+              <div className="relative px-6 py-8 bg-card rounded-md border flex flex-col items-center">
+                <Image src={phoneIcon} alt="Phone Icon" className="h-16 w-16" />
+                <h3 className="mt-5 text-xl font-semibold tracking-tight text-center">
+                  Телефон
+                </h3>
+                <p className="mt-3 text-center text-muted-foreground">
+                  Работни дни от 9:00 до 18:00 ч.
+                </p>
+                <Link
+                  href="tel:+359123456789"
+                  className="mt-3 text-center font-medium text-primary hover:underline"
+                >
+                  +359 123 456 789
+                </Link>
+                <PatternDashedTop />
               </div>
-              <h3 className="mt-6 font-semibold text-xl">Телефон</h3>
-              <p className="my-2.5 text-muted-foreground">
-                Работни дни от 9:00 до 18:00 ч.
-              </p>
-              <Link
-                className="font-medium text-primary hover:underline"
-                href="tel:+359123456789"
-              >
-                +359 123 456 789
-              </Link>
             </div>
           </div>
 
@@ -151,7 +154,6 @@ export const ContactSection = () => {
                       )}
                     </div>
                   </div>
-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     <div>
                       <Label htmlFor="phone">Телефон (опционално)</Label>
@@ -273,5 +275,56 @@ export const ContactSection = () => {
         onClose={() => setIsPrivacyModalOpen(false)}
       />
     </section>
+  );
+};
+const PatternDashedTop = () => {
+  return (
+    <div
+      className="absolute inset-0 -top-px -left-px z-0"
+      style={{
+        backgroundImage: `
+        linear-gradient(to right, var(--border) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--border) 1px, transparent 1px)
+      `,
+        backgroundSize: "20px 20px",
+        backgroundPosition: "0 0, 0 0",
+        maskImage: `
+        repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
+      `,
+        WebkitMaskImage: `
+ repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 70% 50% at 50% 0%, #000 60%, transparent 100%)
+      `,
+        maskComposite: "intersect",
+        WebkitMaskComposite: "source-in",
+      }}
+    />
   );
 };
