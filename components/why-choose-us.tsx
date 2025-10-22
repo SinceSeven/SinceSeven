@@ -69,7 +69,7 @@ export function WhyChooseUs() {
 
       <div className="mt-32 space-y-12">
         <p className="text-3xl font-medium tracking-tight">
-          Доверие от над 100 бизнеса и хиляди доволни клиенти
+          Вече спечелихме доверието на
         </p>
         <LogoCloud />
       </div>
