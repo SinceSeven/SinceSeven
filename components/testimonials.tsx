@@ -43,12 +43,15 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <div className="mx-auto max-w-(--breakpoint-xl) px-6 py-12 sm:py-24">
+    <div
+      id="testimonials"
+      className="mx-auto max-w-(--breakpoint-xl) px-6 py-12 sm:py-24"
+    >
       <h2 className="text-center text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
         Обичани от нашите клиенти
       </h2>
       <p className="text-muted-foreground mt-2 text-center text-lg tracking-normal text-balance sm:mt-4 sm:text-2xl">
-        Техните отзиви говорят повече от думи
+        Отзивите за нас
       </p>
 
       <div className="mx-auto mt-16 max-w-5xl columns-1 gap-6 sm:columns-2 lg:columns-3">
