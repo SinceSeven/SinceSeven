@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { Dribbble, Github, Twitter } from "lucide-react";
+import { Instagram } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "./logo";
 
@@ -57,7 +57,8 @@ const Footer = () => {
                 <Logo />
               </Link>
               <p className="text-muted-foreground mt-1.5">
-                Модерни уебсайтове и онлайн маркетинг за растежа на вашия бизнес.
+                Модерни уебсайтове и онлайн маркетинг за растежа на вашия
+                бизнес.
               </p>
             </div>
             {sections.map(({ title, links }) => (
@@ -85,14 +86,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} SinceSeven. Всички права запазени.
           </p>
           <div className="flex items-center gap-4">
-            <Link href="/">
-              <Dribbble className="text-muted-foreground h-5 w-5" />
-            </Link>
-            <Link href="/">
-              <Twitter className="text-muted-foreground h-5 w-5" />
-            </Link>
-            <Link href="/">
-              <Github className="text-muted-foreground h-5 w-5" />
+            <Link href="https://www.instagram.com/sincesevenbg/">
+              <Instagram className="text-muted-foreground h-5 w-5" />
             </Link>
           </div>
         </div>
