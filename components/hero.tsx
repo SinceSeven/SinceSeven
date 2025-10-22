@@ -3,16 +3,10 @@
 import { useEffect, useState } from "react";
 import { TrendingUp, Users, Globe, Zap } from "lucide-react";
 import { Button } from "./ui/button";
+import { scrollToContact } from "../lib/utils/scrolltocontact";
 
 export function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   useEffect(() => {
     const interval = setInterval(() => {

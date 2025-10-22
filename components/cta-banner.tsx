@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
+import { scrollToContact } from "@/lib/utils/scrolltocontact";
 
 export function CtaBanner({
   className,
@@ -21,7 +22,7 @@ export function CtaBanner({
           Свържете се с нас за безплатна консултация и оферта за вашия проект.
         </p>
 
-        <Button className="mt-10" size="lg">
+        <Button onClick={scrollToContact} size="lg" className="mt-10">
           Безплатна консултация
         </Button>
       </div>
