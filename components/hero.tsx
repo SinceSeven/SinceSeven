@@ -7,6 +7,13 @@ import { Button } from "./ui/button";
 export function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % 3);
@@ -48,7 +55,9 @@ export function Hero() {
         </p>
       </div>
       <div className="mt-6 sm:mt-8 flex gap-3 sm:gap-4 justify-center">
-        <Button size="lg">Заявка за оферта</Button>
+        <Button onClick={scrollToContact} size="lg">
+          Заявка за оферта
+        </Button>
       </div>
 
       <div className="mt-12 sm:mt-16 relative w-full max-w-5xl mx-auto h-[400px] sm:h-[500px] md:h-[600px]">

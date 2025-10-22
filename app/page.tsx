@@ -1,4 +1,5 @@
 import { BackgroundPattern } from "@/components/background-pattern";
+import { ContactSection } from "@/components/contact-section";
 import { FAQ } from "@/components/faq";
 import { FeaturesComparison } from "@/components/features-comparison";
 import Footer from "@/components/footer";
@@ -22,6 +23,7 @@ export default function Home() {
       <FeaturesComparison />
       <FAQ />
       <Testimonials />
+      <ContactSection />
       <Footer />
     </div>
   );
