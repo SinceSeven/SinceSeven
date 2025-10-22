@@ -9,7 +9,7 @@ export interface UseContactFormReturn {
   errors: Partial<Record<keyof ContactFormData, string>> & { general?: string };
   isLoading: boolean;
   isSuccess: boolean;
-  updateField: (field: keyof ContactFormData, value: string) => void;
+  updateField: (field: keyof ContactFormData, value: string | boolean) => void;
   submitForm: () => Promise<void>;
   resetForm: () => void;
 }
@@ -29,7 +29,7 @@ export function useContactForm(): UseContactFormReturn {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const updateField = (field: keyof ContactFormData, value: string) => {
+  const updateField = (field: keyof ContactFormData, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
     
     if (errors[field]) {

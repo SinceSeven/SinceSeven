@@ -17,7 +17,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 export const ContactSection = () => {
   const { formData, errors, isLoading, isSuccess, updateField, submitForm } =
@@ -253,6 +253,7 @@ export const ContactSection = () => {
                         id="terms"
                         disabled={isLoading}
                         checked={formData.terms}
+                        onCheckedChange={(checked: boolean) => updateField("terms", checked)}
                         className={`mt-2 ${
                           errors.terms ? "border-red-500" : ""
                         }`}
