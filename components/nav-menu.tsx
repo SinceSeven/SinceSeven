@@ -11,6 +11,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { scrollToElement } from "@/lib/utils/scrolltocontact";
 
 export const NavMenu = ({
   className,
@@ -30,27 +31,27 @@ export const NavMenu = ({
       >
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={triggerStyle}>
-            <Link href="/#why-choose-us">За нас</Link>
+            <span className="cursor-pointer" onClick={() => scrollToElement("why-choose-us")}>За нас</span>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={triggerStyle}>
-            <Link href="/#industries">Услуги</Link>
+            <span className="cursor-pointer" onClick={() => scrollToElement("industries")}>Услуги</span>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={triggerStyle}>
-            <Link href="/#features">Предимства</Link>
+            <span className="cursor-pointer" onClick={() => scrollToElement("features")}>Предимства</span>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={triggerStyle}>
-            <Link href="/#faq">Въпроси</Link>
+            <span className="cursor-pointer" onClick={() => scrollToElement("faq")}>Въпроси</span>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={triggerStyle}>
-            <Link href="/#testimonials">Отзиви</Link>
+            <span className="cursor-pointer" onClick={() => scrollToElement("testimonials")}>Отзиви</span>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
