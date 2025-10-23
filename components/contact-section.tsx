@@ -81,15 +81,15 @@ export const ContactSection = () => {
                 <p className="mt-3 text-center text-muted-foreground text-lg">
                   Изпратете ни имейл за всякакви въпроси.
                 </p>
-                <span
-                  className="mt-4 text-center font-medium text-primary hover:underline text-lg cursor-pointer select-text break-all"
+                <Button
                   onClick={() => {
                     navigator.clipboard.writeText("info@sinceseven.bg");
                     alert("Имейлът е копиран в клипборда!");
                   }}
+                  className="mt-4 w-full sm:w-auto px-10 py-3 text-lg"
                 >
                   info@sinceseven.bg
-                </span>
+                </Button>
                 <PatternDashedTop />
               </div>
             </div>
@@ -104,12 +104,15 @@ export const ContactSection = () => {
                 <p className="mt-3 text-center text-muted-foreground text-lg">
                   Свържете се с нас по телефон за всякакви въпроси.
                 </p>
-                <a
-                  href="tel:+359123456789"
-                  className="mt-4 text-center font-medium text-primary hover:underline text-lg select-text break-all"
+                <Button
+                  onClick={() => {
+                    navigator.clipboard.writeText("+359123456789");
+                    window.location.href = "tel:+359123456789";
+                  }}
+                  className="mt-4 w-full sm:w-auto px-10 py-3 text-lg"
                 >
                   +359 123 456 789
-                </a>
+                </Button>
                 <PatternDashedTop />
               </div>
             </div>
