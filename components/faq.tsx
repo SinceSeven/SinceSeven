@@ -32,8 +32,7 @@ const faqs: FrequentlyAskedQuestion[] = [
   },
   {
     question: "Поддържате ли уебсайтовете след изпълнението?",
-    answer:
-      "Да, предлагаме безплатна поддръжка за първите 3 месеца и опции за дългосрочна поддръжка.",
+    answer: "Да, предлагаме поддръжка за сайто и всички останли услуги",
     icon: ShieldPlus,
   },
   {
@@ -44,7 +43,8 @@ const faqs: FrequentlyAskedQuestion[] = [
   },
   {
     question: "Какви са вашите цени?",
-    answer: "Цените варират според проекта. Свържете се с нас за персонализирана оферта.",
+    answer:
+      "Цените варират според проекта. Свържете се с нас за персонализирана оферта.",
     icon: CircleDollarSign,
   },
   {
@@ -69,7 +69,12 @@ const faqs: FrequentlyAskedQuestion[] = [
 
 export function FAQ() {
   return (
-    <div id="faq" className="bg-muted">
+    <div
+      id="faq"
+      itemScope
+      itemType="https://schema.org/FAQPage"
+      className="bg-muted"
+    >
       <div className="max-w-(--breakpoint-xl) mx-auto px-6 text-center py-24">
         <h2 className="mt-5 max-w-4xl mx-auto text-4xl sm:text-5xl leading-[1.1] font-semibold tracking-tighter text-balance">
           Често задавани въпроси
@@ -82,6 +87,8 @@ export function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
+              itemScope
+              itemType="https://schema.org/Question"
               className={cn(
                 "relative p-6 border bg-card -ms-px -mt-px text-start overflow-hidden",
                 "first:rounded-t-lg md:first:rounded-tr-none md:nth-[2]:rounded-tr-lg md:nth-last-[2]:rounded-bl-lg last:rounded-b-lg md:last:rounded-bl-none"
@@ -138,10 +145,14 @@ export function FAQ() {
               <div className="isolate">
                 <div className="flex items-center gap-2 text-lg font-medium">
                   <faq.icon className="text-primary mr-2.5 size-5 shrink-0" />
-                  {faq.question}
+                  <span itemProp="name">{faq.question}</span>
                 </div>
-                <div className="mt-2 pl-10 text-base text-start text-foreground/80">
-                  {faq.answer}
+                <div
+                  className="mt-2 pl-10 text-base text-start text-foreground/80"
+                  itemScope
+                  itemType="https://schema.org/Answer"
+                >
+                  <span itemProp="text">{faq.answer}</span>
                 </div>
               </div>
             </div>

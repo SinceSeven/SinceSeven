@@ -29,23 +29,23 @@ export const ContactSection = () => {
     return (
       <section
         id="contact"
-        className="py-16 bg-gradient-to-b from-background to-accent/20"
+        className="py-20 bg-gradient-to-b from-background to-accent/20"
       >
         <div className="w-full max-w-3xl mx-auto px-6 text-center">
-          <div className="mx-auto w-16 h-16 flex items-center justify-center bg-green-100 text-green-600 rounded-full mb-6">
-            <CheckCircle className="w-8 h-8" />
+          <div className="mx-auto w-20 h-20 flex items-center justify-center bg-green-100 text-green-600 rounded-full mb-6">
+            <CheckCircle className="w-10 h-10" />
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-green-600">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-green-600">
             Благодарим ви!
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-muted-foreground">
+          <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
             Вашето съобщение беше изпратено успешно. Ще се свържем с вас
             възможно най-скоро.
           </p>
           <Button
             onClick={() => window.location.reload()}
             variant="outline"
-            className="mt-6 w-full sm:w-auto"
+            className="mt-6 w-full sm:w-auto px-10 py-3 text-lg"
           >
             Изпратете друго съобщение
           </Button>
@@ -55,35 +55,36 @@ export const ContactSection = () => {
   }
 
   return (
-    <section id="contact" className="py-16 bg-primary/4">
+    <section id="contact" className="py-20 bg-primary/4">
       <div className="w-full max-w-7xl mx-auto px-6 xl:px-0">
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-14 sm:mb-20">
           <span className="text-muted-foreground uppercase font-semibold text-sm">
             Свържете се с нас
           </span>
-          <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
             Готови сме да помогнем на вашия бизнес!
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Свържете се с нас за безплатна консултация или изпратете запитване
             за вашия проект.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 md:gap-12 items-start">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-x-6 gap-y-8 mt-6">
-            <div className="rounded-lg border bg-muted p-1 relative">
-              <div className="relative px-6 py-8 bg-card rounded-md border flex flex-col items-center">
-                <Image src={emailIcon} alt="Email Icon" className="h-16 w-16" />
-                <h3 className="mt-5 text-xl font-semibold tracking-tight text-center">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
+          {/* Phone/Email Cards */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-8 mt-6">
+            <div className="rounded-lg border bg-muted p-1 relative lg:h-full">
+              <div className="relative px-8 py-10 bg-card rounded-md border flex flex-col items-center h-full">
+                <Image src={emailIcon} alt="Email Icon" className="h-20 w-20" />
+                <h3 className="mt-6 text-2xl font-semibold tracking-tight text-center">
                   Имейл
                 </h3>
-                <p className="mt-3 text-center text-muted-foreground">
+                <p className="mt-3 text-center text-muted-foreground text-lg">
                   Изпратете ни имейл за всякакви въпроси.
                 </p>
                 <Link
                   href="mailto:info@sinceseven.bg"
-                  className="mt-3 text-center font-medium text-primary hover:underline break-words"
+                  className="mt-4 text-center font-medium text-primary hover:underline break-words text-lg"
                 >
                   info@sinceseven.bg
                 </Link>
@@ -91,18 +92,16 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="rounded-lg border bg-muted p-1 relative">
-              <div className="relative px-6 py-8 bg-card rounded-md border flex flex-col items-center">
-                <Image src={phoneIcon} alt="Phone Icon" className="h-16 w-16" />
-                <h3 className="mt-5 text-xl font-semibold tracking-tight text-center">
+            <div className="rounded-lg border bg-muted p-1 relative lg:h-full">
+              <div className="relative px-8 py-10 bg-card rounded-md border flex flex-col items-center h-full">
+                <Image src={phoneIcon} alt="Phone Icon" className="h-20 w-20" />
+                <h3 className="mt-6 text-2xl font-semibold tracking-tight text-center">
                   Телефон
                 </h3>
-                <p className="mt-3 text-center text-muted-foreground">
-                  Работни дни от 9:00 до 18:00 ч.
-                </p>
+
                 <Link
                   href="tel:+359123456789"
-                  className="mt-3 text-center font-medium text-primary hover:underline"
+                  className="mt-4 text-center font-medium text-primary hover:underline text-lg"
                 >
                   +359 123 456 789
                 </Link>
@@ -111,11 +110,15 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <Card className="bg-card shadow-lg border-0">
-            <CardContent className="p-6 md:p-8">
-              <form onSubmit={handleSubmit}>
-                <div className="grid gap-4 md:gap-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          {/* Contact Form */}
+          <Card className="bg-card shadow-lg border-0 w-full lg:self-stretch">
+            <CardContent className="p-8 md:p-10 h-full flex flex-col">
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col h-full justify-between"
+              >
+                <div className="grid gap-6 md:gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="name">Име *</Label>
                       <Input
@@ -123,7 +126,7 @@ export const ContactSection = () => {
                         id="name"
                         value={formData.name}
                         onChange={(e) => updateField("name", e.target.value)}
-                        className={`mt-2 ${
+                        className={`mt-3 text-lg ${
                           errors.name ? "border-red-500" : ""
                         }`}
                         disabled={isLoading}
@@ -142,7 +145,7 @@ export const ContactSection = () => {
                         id="email"
                         value={formData.email}
                         onChange={(e) => updateField("email", e.target.value)}
-                        className={`mt-2 ${
+                        className={`mt-3 text-lg ${
                           errors.email ? "border-red-500" : ""
                         }`}
                         disabled={isLoading}
@@ -154,7 +157,8 @@ export const ContactSection = () => {
                       )}
                     </div>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="phone">Телефон (опционално)</Label>
                       <Input
@@ -162,7 +166,7 @@ export const ContactSection = () => {
                         id="phone"
                         value={formData.phone || ""}
                         onChange={(e) => updateField("phone", e.target.value)}
-                        className={`mt-2 ${
+                        className={`mt-3 text-lg ${
                           errors.phone ? "border-red-500" : ""
                         }`}
                         disabled={isLoading}
@@ -180,7 +184,7 @@ export const ContactSection = () => {
                         id="company"
                         value={formData.company || ""}
                         onChange={(e) => updateField("company", e.target.value)}
-                        className={`mt-2 ${
+                        className={`mt-3 text-lg ${
                           errors.company ? "border-red-500" : ""
                         }`}
                         disabled={isLoading}
@@ -200,10 +204,10 @@ export const ContactSection = () => {
                       placeholder="Разкажете ни за вашия проект или въпрос..."
                       value={formData.message}
                       onChange={(e) => updateField("message", e.target.value)}
-                      className={`mt-2 ${
+                      className={`mt-3 text-lg ${
                         errors.message ? "border-red-500" : ""
                       }`}
-                      rows={6}
+                      rows={8}
                       disabled={isLoading}
                     />
                     {errors.message && (
@@ -213,7 +217,7 @@ export const ContactSection = () => {
                     )}
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 text-lg">
                     <Checkbox
                       id="terms"
                       disabled={isLoading}
@@ -248,13 +252,13 @@ export const ContactSection = () => {
 
                 <Button
                   type="submit"
-                  className="mt-6 w-full"
+                  className="mt-8 w-full text-lg py-4"
                   size="lg"
                   disabled={isLoading}
                 >
                   {isLoading ? (
                     <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                       Изпращане...
                     </>
                   ) : (
@@ -262,7 +266,7 @@ export const ContactSection = () => {
                   )}
                 </Button>
                 {errors.general && (
-                  <p className="text-red-500 text-sm mt-1">{errors.general}</p>
+                  <p className="text-red-500 text-sm mt-2">{errors.general}</p>
                 )}
               </form>
             </CardContent>
@@ -277,6 +281,7 @@ export const ContactSection = () => {
     </section>
   );
 };
+
 const PatternDashedTop = () => {
   return (
     <div
