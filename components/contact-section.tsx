@@ -204,10 +204,9 @@ export const ContactSection = () => {
                       placeholder="Разкажете ни за вашия проект или въпрос..."
                       value={formData.message}
                       onChange={(e) => updateField("message", e.target.value)}
-                      className={`mt-3 text-lg ${
+                      className={`mt-3 text-lg resize-none h-48 leading-relaxed p-3 ${
                         errors.message ? "border-red-500" : ""
                       }`}
-                      rows={8}
                       disabled={isLoading}
                     />
                     {errors.message && (
