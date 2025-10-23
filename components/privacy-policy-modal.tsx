@@ -33,7 +33,7 @@ export const PrivacyPolicyModal = ({
         onClick={onClose}
       />
 
-      <div className="relative bg-background rounded-2xl shadow-2xl max-w-3xl w-full max-h-[85vh] overflow-hidden border border-border/50">
+      <div className="relative bg-background rounded-2xl shadow-2xl max-w-3xl w-full max-h-[85vh] flex flex-col border border-border/50">
         {/* Header */}
         <div className="relative bg-gradient-to-br from-primary/5 via-background to-background px-8 py-6 border-b border-border/50">
           <div className="flex items-start justify-between gap-4">
@@ -62,7 +62,7 @@ export const PrivacyPolicyModal = ({
         </div>
 
         {/* Content */}
-        <div className="overflow-y-auto max-h-[calc(85vh-180px)] px-8 py-6">
+        <div className="overflow-y-auto flex-1 px-8 py-6 pb-32 max-h-[calc(85vh-120px)]">
           <div className="space-y-8">
             {/* Introduction */}
             <div className="space-y-3">

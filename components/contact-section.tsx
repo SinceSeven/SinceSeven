@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -70,10 +69,11 @@ export const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* Phone/Email Cards */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-8 mt-6">
-            <div className="rounded-lg border bg-muted p-1 relative lg:h-full">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-stretch h-full">
+          {/* Email + Phone Cards */}
+          <div className="flex flex-col gap-8 h-full">
+            {/* Email Card */}
+            <div className="rounded-lg border bg-muted p-1 flex-1">
               <div className="relative px-8 py-10 bg-card rounded-md border flex flex-col items-center h-full">
                 <Image src={emailIcon} alt="Email Icon" className="h-20 w-20" />
                 <h3 className="mt-6 text-2xl font-semibold tracking-tight text-center">
@@ -91,14 +91,16 @@ export const ContactSection = () => {
                 <PatternDashedTop />
               </div>
             </div>
-
-            <div className="rounded-lg border bg-muted p-1 relative lg:h-full">
+            {/* Phone Card */}
+            <div className="rounded-lg border bg-muted p-1 flex-1">
               <div className="relative px-8 py-10 bg-card rounded-md border flex flex-col items-center h-full">
                 <Image src={phoneIcon} alt="Phone Icon" className="h-20 w-20" />
                 <h3 className="mt-6 text-2xl font-semibold tracking-tight text-center">
                   Телефон
                 </h3>
-
+                <p className="mt-3 text-center text-muted-foreground text-lg">
+                  Свържете се с нас по телефон за всякакви въпроси.
+                </p>
                 <Link
                   href="tel:+359123456789"
                   className="mt-4 text-center font-medium text-primary hover:underline text-lg"
@@ -111,8 +113,8 @@ export const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-card shadow-lg border-0 w-full lg:self-stretch">
-            <CardContent className="p-8 md:p-10 h-full flex flex-col">
+          <div className="rounded-lg border bg-muted p-1 flex-1">
+            <div className="relative px-8 py-10 bg-card rounded-md border flex flex-col h-full">
               <form
                 onSubmit={handleSubmit}
                 className="flex flex-col h-full justify-between"
@@ -216,7 +218,7 @@ export const ContactSection = () => {
                     )}
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 text-lg">
+                  <div className="flex items-start sm:items-center gap-2">
                     <Checkbox
                       id="terms"
                       disabled={isLoading}
@@ -224,29 +226,24 @@ export const ContactSection = () => {
                       onCheckedChange={(checked: boolean) =>
                         updateField("terms", checked)
                       }
-                      className={`mt-2 ${errors.terms ? "border-red-500" : ""}`}
+                      className={`${errors.terms ? "border-red-500" : ""}`}
                     />
-                    <span className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-                      Съгласен/на съм с обработката на личните ми данни за
-                      целите на тази консултация.
-                      <Button
+
+                    <p className="text-l">
+                      Съгласни ли сте с{" "}
+                      <button
                         type="button"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setIsPrivacyModalOpen(true);
-                        }}
-                        className="ml-0 sm:ml-2 mt-2 sm:mt-0 flex items-center hover:text-gray-900"
+                        onClick={() => setIsPrivacyModalOpen(true)}
+                        className="underline cursor-pointer font-medium"
                       >
-                        <Shield className="h-4 w-4 mr-1" />
-                        Политика за поверителност
-                      </Button>
-                    </span>
-                    {errors.terms && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.terms}
-                      </p>
-                    )}
+                        общите условия
+                      </button>
+                      ?
+                    </p>
                   </div>
+                  {errors.terms && (
+                    <p className="text-red-500 text-sm mt-1">{errors.terms}</p>
+                  )}
                 </div>
 
                 <Button
@@ -268,8 +265,8 @@ export const ContactSection = () => {
                   <p className="text-red-500 text-sm mt-2">{errors.general}</p>
                 )}
               </form>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
 
