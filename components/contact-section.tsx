@@ -9,7 +9,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useContactForm } from "@/lib/hooks/useContactForm";
 import { PrivacyPolicyModal } from "@/components/privacy-policy-modal";
 import { Loader2, CheckCircle, Shield } from "lucide-react";
-import Link from "next/link";
 import { useState } from "react";
 import phoneIcon from "../public/icons/3dicons-call-ringing-dynamic-color.png";
 import emailIcon from "../public/icons/3dicons-mail-dynamic-color.png";
@@ -82,18 +81,18 @@ export const ContactSection = () => {
                 <p className="mt-3 text-center text-muted-foreground text-lg">
                   Изпратете ни имейл за всякакви въпроси.
                 </p>
-                <p
-                  className="mt-4 text-center font-medium text-primary hover:underline break-words text-lg select-text cursor-pointer"
+                <input
+                  type="text"
+                  readOnly
+                  value="info@sinceseven.bg"
+                  className="mt-4 text-center font-medium text-primary hover:underline text-lg bg-transparent border-none focus:outline-none cursor-pointer select-all"
                   onClick={() =>
                     (window.location.href = "mailto:info@sinceseven.bg")
                   }
-                >
-                  info@sinceseven.bg
-                </p>
+                />
                 <PatternDashedTop />
               </div>
             </div>
-
             {/* Phone Card */}
             <div className="rounded-lg border bg-muted p-1 flex-1">
               <div className="relative px-8 py-10 bg-card rounded-md border flex flex-col items-center h-full">
@@ -104,12 +103,13 @@ export const ContactSection = () => {
                 <p className="mt-3 text-center text-muted-foreground text-lg">
                   Свържете се с нас по телефон за всякакви въпроси.
                 </p>
-                <p
-                  className="mt-4 text-center font-medium text-primary hover:underline text-lg select-text cursor-pointer"
+                <input
+                  type="text"
+                  readOnly
+                  value="+359 123 456 789"
+                  className="mt-4 text-center font-medium text-primary hover:underline text-lg bg-transparent border-none focus:outline-none cursor-pointer select-all"
                   onClick={() => (window.location.href = "tel:+359123456789")}
-                >
-                  +359 123 456 789
-                </p>
+                />
                 <PatternDashedTop />
               </div>
             </div>
@@ -232,7 +232,7 @@ export const ContactSection = () => {
                       className={`${errors.terms ? "border-red-500" : ""}`}
                     />
 
-                    <p className="text-l">
+                    <p className="text-lg">
                       Съгласни ли сте с{" "}
                       <button
                         type="button"
