@@ -62,7 +62,8 @@ export const PrivacyPolicyModal = ({
         </div>
 
         {/* Content */}
-        <div className="overflow-y-auto flex-1 px-8 py-6 pb-32 max-h-[calc(85vh-120px)]">
+        <div className="overflow-y-auto flex-1 px-8 py-6 pb-16 max-h-[calc(85vh-100px)]">
+          {" "}
           <div className="space-y-8">
             {/* Introduction */}
             <div className="space-y-3">
@@ -251,8 +252,12 @@ export const PrivacyPolicyModal = ({
         </div>
 
         {/* Footer */}
-        <div className="flex items-center justify-end gap-3 px-8 py-5 border-t border-border/50 bg-muted/30">
-          <Button onClick={onClose} size="lg" className="px-8">
+        <div className="flex justify-end sm:justify-end items-center gap-3 px-8 py-5 border-t border-border/50 bg-muted/30">
+          <Button
+            onClick={onClose}
+            size="lg"
+            className="px-8 sm:px-8 mx-auto sm:mx-0"
+          >
             Разбрах
           </Button>
         </div>
