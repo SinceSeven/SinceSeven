@@ -17,6 +17,7 @@ import emailIcon from "../public/icons/3dicons-mail-dynamic-color.png";
 interface CopyButtonProps {
   text: string;
   children: React.ReactNode;
+  className?: string; // Added className as an optional prop
 }
 
 const CopyButton: React.FC<CopyButtonProps> = ({ text, children }) => {
@@ -139,7 +140,15 @@ export const ContactSection = () => {
                   <p className="mt-3 text-center text-muted-foreground text-lg">
                     Свържете се с нас по телефон за всякакви въпроси.
                   </p>
-                  <CopyButton text="+359123456789">+359 123 456 789</CopyButton>
+                  <CopyButton
+                    text="+359882754088"
+                    className="mt-4  text-center"
+                  >
+                    +359 877 101 054
+                  </CopyButton>
+                  <CopyButton text="+359882754088" className="mt-4 text-center">
+                    +359 882 754 088
+                  </CopyButton>
                 </div>
               </div>
             </div>
