@@ -7,6 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "./ui/table";
+import { LogoCloud } from "./logo-cloud";
 
 interface Feature {
   title: string;
@@ -20,75 +21,39 @@ interface Feature {
 const features: Feature[] = [
   {
     title: "Модерен дизайн",
-    value: {
-      sinceSeven: true,
-      competitors: true,
-      diyApproach: false,
-    },
+    value: { sinceSeven: true, competitors: true, diyApproach: false },
   },
   {
     title: "SEO оптимизация",
-    value: {
-      sinceSeven: true,
-      competitors: false,
-      diyApproach: false,
-    },
+    value: { sinceSeven: true, competitors: false, diyApproach: false },
   },
   {
     title: "Мобилна оптимизация",
-    value: {
-      sinceSeven: true,
-      competitors: true,
-      diyApproach: false,
-    },
+    value: { sinceSeven: true, competitors: true, diyApproach: false },
   },
   {
     title: "Google Maps оптимизация",
-    value: {
-      sinceSeven: true,
-      competitors: false,
-      diyApproach: true,
-    },
+    value: { sinceSeven: true, competitors: false, diyApproach: true },
   },
   {
-    title: "Безплатна поддръжка",
-    value: {
-      sinceSeven: true,
-      competitors: false,
-      diyApproach: true,
-    },
+    title: "Поддръжка",
+    value: { sinceSeven: true, competitors: false, diyApproach: true },
   },
   {
     title: "Анализ и отчети",
-    value: {
-      sinceSeven: true,
-      competitors: false,
-      diyApproach: true,
-    },
+    value: { sinceSeven: true, competitors: false, diyApproach: true },
   },
   {
     title: "Гаранция за резултат",
-    value: {
-      sinceSeven: true,
-      competitors: false,
-      diyApproach: false,
-    },
+    value: { sinceSeven: true, competitors: false, diyApproach: false },
   },
   {
     title: "24/7 поддръжка",
-    value: {
-      sinceSeven: true,
-      competitors: false,
-      diyApproach: false,
-    },
+    value: { sinceSeven: true, competitors: false, diyApproach: false },
   },
   {
     title: "Безплатни актуализации",
-    value: {
-      sinceSeven: true,
-      competitors: false,
-      diyApproach: false,
-    },
+    value: { sinceSeven: true, competitors: false, diyApproach: false },
   },
   {
     title: "Време за изпълнение",
@@ -113,7 +78,8 @@ export function FeaturesComparison() {
         Защо да изберете SinceSeven за вашия проект
       </h2>
       <p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto">
-        Предлагаме иновативни и висококачествени решения, които отговарят на уникалните нужди на нашите клиенти.
+        Предлагаме иновативни и висококачествени решения, които отговарят на
+        уникалните нужди на нашите клиенти.
       </p>
 
       <div className="mt-16 border p-2 bg-muted border-dashed rounded-lg">
@@ -143,6 +109,13 @@ export function FeaturesComparison() {
           </TableBody>
         </Table>
       </div>
+
+      <div className="mt-32 space-y-12">
+        <p className="text-3xl font-medium tracking-tight">
+          Вече спечелихме доверието на
+        </p>
+        <LogoCloud />
+      </div>
     </div>
   );
 }
@@ -151,7 +124,6 @@ const ValueCell = ({ value }: { value: boolean | string }) => {
   if (typeof value === "string") {
     return <TableCell>{value}</TableCell>;
   }
-
   return (
     <TableCell className="text-center">
       {value ? (
