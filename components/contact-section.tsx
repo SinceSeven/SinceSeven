@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { BackgroundPattern } from "@/components/background-pattern";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -54,7 +55,7 @@ export const ContactSection = () => {
   if (isSuccess) {
     return (
       <div className="relative">
-        <PatternDashedTop />
+        <BackgroundPattern />
         <section
           id="contact"
           className="py-20 bg-gradient-to-b from-background to-accent/20 relative z-10"
@@ -85,7 +86,7 @@ export const ContactSection = () => {
 
   return (
     <div className="relative">
-      <PatternDashedTop />
+      <BackgroundPattern />
       <section id="contact" className="py-20 bg-primary/4 relative z-10">
         <div className="w-full max-w-7xl mx-auto px-6 xl:px-0">
           <div className="text-center mb-14 sm:mb-20">
@@ -313,57 +314,5 @@ export const ContactSection = () => {
         />
       </section>
     </div>
-  );
-};
-
-const PatternDashedTop = () => {
-  return (
-    <div
-      className="absolute inset-0 -top-px -left-px z-0"
-      style={{
-        backgroundImage: `
-        linear-gradient(to right, var(--border) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--border) 1px, transparent 1px)
-      `,
-        backgroundSize: "20px 20px",
-        backgroundPosition: "0 0, 0 0",
-        maskImage: `
-        repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
-      `,
-        WebkitMaskImage: `
- repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            radial-gradient(ellipse 70% 50% at 50% 0%, #000 60%, transparent 100%)
-      `,
-        maskComposite: "intersect",
-        WebkitMaskComposite: "source-in",
-      }}
-    />
   );
 };
