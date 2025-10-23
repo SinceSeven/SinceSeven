@@ -25,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="bg" suppressHydrationWarning>
+      <head>
+        <meta name="apple-mobile-web-app-title" content="SinceSeven" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
