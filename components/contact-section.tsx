@@ -86,13 +86,15 @@ export const ContactSection = () => {
                   readOnly
                   value="info@sinceseven.bg"
                   className="mt-4 text-center font-medium text-primary hover:underline text-lg bg-transparent border-none focus:outline-none cursor-pointer select-all"
-                  onClick={() =>
-                    (window.location.href = "mailto:info@sinceseven.bg")
-                  }
+                  onClick={() => {
+                    navigator.clipboard.writeText("info@sinceseven.bg");
+                    alert("Имейлът е копиран в клипборда!");
+                  }}
                 />
                 <PatternDashedTop />
               </div>
             </div>
+
             {/* Phone Card */}
             <div className="rounded-lg border bg-muted p-1 flex-1">
               <div className="relative px-8 py-10 bg-card rounded-md border flex flex-col items-center h-full">
