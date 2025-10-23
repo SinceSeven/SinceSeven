@@ -82,15 +82,18 @@ export const ContactSection = () => {
                 <p className="mt-3 text-center text-muted-foreground text-lg">
                   Изпратете ни имейл за всякакви въпроси.
                 </p>
-                <Link
-                  href="mailto:info@sinceseven.bg"
-                  className="mt-4 text-center font-medium text-primary hover:underline break-words text-lg"
+                <p
+                  className="mt-4 text-center font-medium text-primary hover:underline break-words text-lg select-text cursor-pointer"
+                  onClick={() =>
+                    (window.location.href = "mailto:info@sinceseven.bg")
+                  }
                 >
                   info@sinceseven.bg
-                </Link>
+                </p>
                 <PatternDashedTop />
               </div>
             </div>
+
             {/* Phone Card */}
             <div className="rounded-lg border bg-muted p-1 flex-1">
               <div className="relative px-8 py-10 bg-card rounded-md border flex flex-col items-center h-full">
@@ -101,12 +104,12 @@ export const ContactSection = () => {
                 <p className="mt-3 text-center text-muted-foreground text-lg">
                   Свържете се с нас по телефон за всякакви въпроси.
                 </p>
-                <Link
-                  href="tel:+359123456789"
-                  className="mt-4 text-center font-medium text-primary hover:underline text-lg"
+                <p
+                  className="mt-4 text-center font-medium text-primary hover:underline text-lg select-text cursor-pointer"
+                  onClick={() => (window.location.href = "tel:+359123456789")}
                 >
                   +359 123 456 789
-                </Link>
+                </p>
                 <PatternDashedTop />
               </div>
             </div>
