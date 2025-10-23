@@ -81,16 +81,15 @@ export const ContactSection = () => {
                 <p className="mt-3 text-center text-muted-foreground text-lg">
                   Изпратете ни имейл за всякакви въпроси.
                 </p>
-                <input
-                  type="text"
-                  readOnly
-                  value="info@sinceseven.bg"
-                  className="mt-4 text-center font-medium text-primary hover:underline text-lg bg-transparent border-none focus:outline-none cursor-pointer select-all"
+                <span
+                  className="mt-4 text-center font-medium text-primary hover:underline text-lg cursor-pointer select-text break-all"
                   onClick={() => {
                     navigator.clipboard.writeText("info@sinceseven.bg");
                     alert("Имейлът е копиран в клипборда!");
                   }}
-                />
+                >
+                  info@sinceseven.bg
+                </span>
                 <PatternDashedTop />
               </div>
             </div>
@@ -105,13 +104,12 @@ export const ContactSection = () => {
                 <p className="mt-3 text-center text-muted-foreground text-lg">
                   Свържете се с нас по телефон за всякакви въпроси.
                 </p>
-                <input
-                  type="text"
-                  readOnly
-                  value="+359 123 456 789"
-                  className="mt-4 text-center font-medium text-primary hover:underline text-lg bg-transparent border-none focus:outline-none cursor-pointer select-all"
-                  onClick={() => (window.location.href = "tel:+359123456789")}
-                />
+                <a
+                  href="tel:+359123456789"
+                  className="mt-4 text-center font-medium text-primary hover:underline text-lg select-text break-all"
+                >
+                  +359 123 456 789
+                </a>
                 <PatternDashedTop />
               </div>
             </div>
