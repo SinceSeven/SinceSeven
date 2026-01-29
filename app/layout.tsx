@@ -27,6 +27,7 @@ export default function RootLayout({
     <html lang="bg" suppressHydrationWarning>
       <head>
         <meta name="apple-mobile-web-app-title" content="SinceSeven" />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="+fKl1e8RrCrwFZQW5DmuuA" async></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
