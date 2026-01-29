@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Bricolage_Grotesque, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Bricolage_Grotesque({
@@ -27,11 +28,15 @@ export default function RootLayout({
     <html lang="bg" suppressHydrationWarning>
       <head>
         <meta name="apple-mobile-web-app-title" content="SinceSeven" />
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="+fKl1e8RrCrwFZQW5DmuuA" async></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="+fKl1e8RrCrwFZQW5DmuuA"
+          strategy="afterInteractive"
+        />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
